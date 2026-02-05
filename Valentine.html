@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Valentine ❤️</title>
+
+  <!-- Mobile friendly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      position: relative;
+      width: 90%;
+      max-width: 350px;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #ff4d6d;
+    }
+
+    button {
+      padding: 14px 26px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 15px;
+    }
+
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #ddd;
+      position: absolute;
+    }
+
+    /* Ring animation */
+    .ring {
+      font-size: 70px;
+      animation: pop 1s ease forwards, pulse 1.5s infinite;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0) rotate(0deg); }
+      100% { transform: scale(1) rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .sparkle {
+      font-size: 24px;
+      animation: float 2s infinite;
+    }
+
+    @keyframes float {
+      0% { opacity: 0; transform: translateY(20px); }
+      50% { opacity: 1; }
+      100% { opacity: 0; transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="box">
+    <h1>Will you be my Valentine? 💖</h1>
+    <button id="yesBtn" onclick="sayYes()">Yes ❤️</button>
+    <button id="noBtn" onmouseover="moveNo()">No 🙈</button>
+  </div>
+
+  <script>
+    function moveNo() {
+      const noBtn = document.getElementById("noBtn");
+      const box = document.getElementById("box");
+
+      const maxX = box.clientWidth - noBtn.offsetWidth;
+      const maxY = box.clientHeight - noBtn.offsetHeight;
+
+      noBtn.style.left = Math.random() * maxX + "px";
+      noBtn.style.top = Math.random() * maxY + "px";
+    }
+
+    function sayYes() {
+      document.getElementById("box").innerHTML = `
+        <div class="ring">💍</div>
+        <h2>You already have my heart 💖</h2>
+        <p>
+          I would choose you in every lifetime.<br><br>
+          Will you be my Valentine today, tomorrow,<br>
+          and for the rest of our forever?
+        </p>
+        <div class="sparkle">✨ ✨ ✨</div>
+        <h3>Forever yours ❤️</h3>
+      `;
+    }
+  </script>
+
+</body>
+</html>
