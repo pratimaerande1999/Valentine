@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Valentine ❤️</title>
+  <title>My Forever – Deepak ❤️</title>
 
-  <!-- Mobile friendly -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -21,12 +20,12 @@
 
     .container {
       background: white;
-      padding: 30px;
+      padding: 25px;
       border-radius: 20px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
       position: relative;
       width: 90%;
-      max-width: 350px;
+      max-width: 360px;
       overflow: hidden;
     }
 
@@ -40,7 +39,7 @@
       border: none;
       border-radius: 30px;
       cursor: pointer;
-      margin: 15px;
+      margin: 12px;
     }
 
     #yesBtn {
@@ -53,7 +52,13 @@
       position: absolute;
     }
 
-    /* Ring animation */
+    .photo {
+      width: 100%;
+      border-radius: 15px;
+      margin: 15px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
     .ring {
       font-size: 70px;
       animation: pop 1s ease forwards, pulse 1.5s infinite;
@@ -85,7 +90,15 @@
 <body>
 
   <div class="container" id="box">
-    <h1>Will you be my Valentine? 💖</h1>
+    <h1>Deepak ❤️</h1>
+
+    <p>
+      I have a question for you,<br>
+      straight from my heart 💖
+    </p>
+
+    <h2>Will you be my Valentine?</h2>
+
     <button id="yesBtn" onclick="sayYes()">Yes ❤️</button>
     <button id="noBtn" onmouseover="moveNo()">No 🙈</button>
   </div>
@@ -105,12 +118,17 @@
     function sayYes() {
       document.getElementById("box").innerHTML = `
         <div class="ring">💍</div>
-        <h2>You already have my heart 💖</h2>
+        <h2>Happy Propose Day, My Love ❤️</h2>
+
+        <img src="deepak.jpg" alt="Us Together" class="photo">
+
         <p>
-          I would choose you in every lifetime.<br><br>
-          Will you be my Valentine today, tomorrow,<br>
-          and for the rest of our forever?
+          Deepak, I choose you today,<br>
+          tomorrow, and forever.<br><br>
+          Thank you for being my husband,<br>
+          my best friend, and my forever Valentine 💖
         </p>
+
         <div class="sparkle">✨ ✨ ✨</div>
         <h3>Forever yours ❤️</h3>
       `;
